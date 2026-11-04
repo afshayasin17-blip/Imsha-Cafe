@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imsha Café</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <button id="themeBtn">Toggle Light/Dark Mode</button>
+
+  <header>
+    <h1>Imsha Café</h1>
+    <p id="status"></p>
+    <p>Freshly brewed happiness, one cup at a time.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="menu">
+      <h2>Our Menu</h2>
+      <img src="coffeee.png" alt="Cup of coffee">
+      <br>
+      <div class="card">
+        <h3>Cappuccino</h3>
+        <p>Rs. 450</p>
+      </div>
+      <div class="card">
+        <h3>Chocolate Cake</h3>
+        <p>Rs. 650</p>
+      </div>
+      <div class="card">
+        <h3>Croissant</h3>
+        <p>Rs. 350</p>
+      </div>
+    </section>
+
+    <section class="steps">
+      <h2>How to Order</h2>
+      <ol type="A">
+        <li>Choose your item</li>
+        <li>Fill the form</li>
+        <li>Pay and enjoy</li>
+      </ol>
+    </section>
+
+    <section id="about">
+      <h2>About Us</h2>
+      <article id="aboutArticle">
+        <p>We serve fresh coffee daily in a cozy space.</p>
+        <p id="moreText" style="display:none;">
+          Imsha Café started as a small dream of two friends who love coffee.
+          Today we bake fresh pastries every morning and brew every cup with care.
+        </p>
+        <button id="readMoreBtn">Read More</button>
+      </article>
+      <p>Follow us on <a href="https://www.instagram.com" target="_blank">Instagram</a> and <a href="https://www.facebook.com" target="_blank">Facebook</a></p>
+    </section>
+
+    <section class="price-list">
+      <h2>Full Price List</h2>
+      <div class="filters">
+        <button class="filter-btn">All</button>
+        <button class="filter-btn">Drinks</button>
+        <button class="filter-btn">Pastries</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-category="Drinks">
+            <td>Cappuccino</td>
+            <td>Rs. 450</td>
+          </tr>
+          <tr data-category="Pastries">
+            <td>Chocolate Cake</td>
+            <td>Rs. 650</td>
+          </tr>
+          <tr data-category="Pastries">
+            <td>Croissant</td>
+            <td>Rs. 350</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="order-section">
+      <h2>Order Total</h2>
+      <ul class="order-list">
+        <li><label><input type="checkbox" class="item" value="450"> Cappuccino - Rs. 450</label></li>
+        <li><label><input type="checkbox" class="item" value="650"> Chocolate Cake - Rs. 650</label></li>
+        <li><label><input type="checkbox" class="item" value="350"> Croissant - Rs. 350</label></li>
+      </ul>
+      <p id="total">Total: Rs. 0</p>
+    </section>
+
+    <section id="contact">
+      <h2>Reserve a Table</h2>
+      <form id="feedbackForm">
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username">
+
+        <label for="useremail">Email:</label>
+        <input type="text" id="useremail" name="useremail">
+
+        <label for="birth-year">Birth Year:</label>
+        <input type="text" id="birth-year" placeholder="e.g. 2002">
+
+        <p>Seating:</p>
+        <label><input type="radio" name="seat" value="indoor" checked> Indoor</label>
+        <label><input type="radio" name="seat" value="outdoor"> Outdoor</label>
+
+        <p>Extras:</p>
+        <label><input type="checkbox" name="extra" value="dessert"> Extra dessert</label>
+        <label><input type="checkbox" name="extra" value="wifi"> Wi-Fi table</label>
+
+        <label for="request">Special Request:</label>
+        <textarea id="request" rows="4"></textarea>
+        <p id="charCount">Characters: 0</p>
+
+        <button type="submit">Reserve</button>
+      </form>
+      <p id="formMessage"></p>
+      <p id="discountMessage"></p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Imsha Café | 123 Street, Islamabad</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
